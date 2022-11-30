@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./style.css";
+import baseUrl from "../../baseUrl";
 
 export default function SignUp() {
   const emailRegix = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -37,7 +38,7 @@ export default function SignUp() {
       );
       return;
     }
-    const res = await axios.post("http://localhost:9000/signup", getVal, {
+    const res = await baseUrl.post(`/signup`, getVal, {
       headers,
     });
     if (res) {

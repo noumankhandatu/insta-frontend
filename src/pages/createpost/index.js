@@ -5,6 +5,7 @@ import { Box } from "@mui/system";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "./style.css";
+import baseUrl from "../../baseUrl";
 
 export default function Createpost() {
   const loadfile = (event) => {
@@ -24,9 +25,9 @@ export default function Createpost() {
     // saving post to mongodb
     if (imageUrl) {
       const handleCreatePost = async () => {
-        const BEndResp = await axios({
+        const BEndResp = await baseUrl({
           method: "post",
-          url: "http://localhost:9000/createPost",
+          url: `/createPost`,
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,

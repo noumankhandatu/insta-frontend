@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./style.css";
+import baseUrl from "../../baseUrl";
 
 export default function Profie() {
   const [getPosts, setPosts] = useState([]);
   const myAllPosts = async () => {
-    const res = await axios({
+    const res = await baseUrl({
       method: "get",
-      url: "http://localhost:9000/myposts",
+      url: `/myposts`,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,

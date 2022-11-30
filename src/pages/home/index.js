@@ -7,15 +7,15 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { toast } from "react-toastify";
 import axios from "axios";
 import "./style.css";
-
+import baseUrl from "../../baseUrl";
 export default function Home() {
   const [allPosts, setAllPosts] = React.useState([]);
   const [liked, setLiked] = React.useState(false);
   // fetching all post from database
   const fetchAllPosts = async () => {
-    const res = await axios({
+    const res = await baseUrl({
       method: "get",
-      url: "http://localhost:9000/allposts",
+      url: `/allposts`,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,

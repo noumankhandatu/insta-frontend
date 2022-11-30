@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { tokenAction } from "../../redux/tokenSlice";
 import "./style.css";
-
+import baseUrl from "../../baseUrl";
 function SignIn() {
   const dispatch = useDispatch();
   const [getVal, setVal] = React.useState({
@@ -21,7 +21,8 @@ function SignIn() {
   };
 
   const handleSubmit = async () => {
-    const response = await axios.post("http://localhost:9000/signin", getVal);
+    // const response = await axios.post(`${baseUrl}/signin`, getVal);
+    const response = await baseUrl.post("/signin", getVal);
     if (response) {
       toast(response.data);
       const jwtToken = response.data.token;
