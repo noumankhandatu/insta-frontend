@@ -1,12 +1,12 @@
 import React from "react";
 import logo from "../../assets/image/logo.png";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { tokenAction } from "../../redux/tokenSlice";
 import "./style.css";
 import baseUrl from "../../baseUrl";
+
 function SignIn() {
   const dispatch = useDispatch();
   const [getVal, setVal] = React.useState({

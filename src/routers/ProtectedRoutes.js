@@ -5,8 +5,6 @@ import Navbar from "../components/navbar";
 import CreatePost from "../pages/createpost";
 import Home from "../pages/home";
 import Profile from "../pages/profile";
-import SignIn from "../pages/signin";
-import SignUp from "../pages/signup";
 
 const ProtectedRoutes = () => {
   return (

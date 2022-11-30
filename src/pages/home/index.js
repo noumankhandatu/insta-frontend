@@ -4,10 +4,9 @@ import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import { Button, CardActionArea, Paper, Typography } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { toast } from "react-toastify";
-import axios from "axios";
 import "./style.css";
 import baseUrl from "../../baseUrl";
+
 export default function Home() {
   const [allPosts, setAllPosts] = React.useState([]);
   const [liked, setLiked] = React.useState(false);

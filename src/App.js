@@ -1,7 +1,7 @@
 import React from "react";
 import ProtectedRoutes from "./routers/ProtectedRoutes";
 import PublicRoutes from "./routers/PublicRoutes";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function App() {
   const auth = useSelector((state) => state.tokenSlice);
