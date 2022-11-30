@@ -3,8 +3,6 @@ import logo from "../../assets/image/logo.png";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
-import { tokenAction } from "../../redux/tokenSlice";
-import { toast } from "react-toastify";
 import Modal from "../modal";
 
 export default function Navbar() {

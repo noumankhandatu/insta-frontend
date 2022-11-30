@@ -31,7 +31,7 @@ function SignIn() {
         localStorage.setItem("jwtToken", jwtToken);
         localStorage.setItem("setUser", JSON.stringify(setUser));
         dispatch(tokenAction(jwtToken));
-        alert("Hurray we made it");
+        alert("Hurray my khatun~ay awal made it");
       }
     }
   };

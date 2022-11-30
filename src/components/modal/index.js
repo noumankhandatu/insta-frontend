@@ -13,7 +13,7 @@ export default function Modal({ setModalOpen }) {
   const navigate = useNavigate();
   const handleLogOut = () => {
     setModalOpen(false);
-    toast.success("Take Care you are log out");
+    toast.success("Take Care babe you are log out");
     dispatch(tokenAction(null));
     localStorage.removeItem("jwtToken");
     navigate("/");

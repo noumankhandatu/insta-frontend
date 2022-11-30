@@ -70,7 +70,7 @@ export default function Createpost() {
     });
     if (res) {
       setImageUrl(res.data.url);
-      toast.success("image saved in cloudinary");
+      toast.success("Babe image saved in cloudinary");
     }
   };
   return (
